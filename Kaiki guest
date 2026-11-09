@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Kaiki Guest</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #172b49;
+    line-height: 1.7;
+}
+
+header {
+    background: #101e35;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #d9b76e;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d9b76e;
+}
+
+.hero {
+    min-height: 380px;
+    background: linear-gradient(
+        rgba(10, 25, 46, 0.85),
+        rgba(10, 25, 46, 0.85)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 55px);
+    color: #e2c27e;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+}
+
+.gold-line {
+    width: 65px;
+    height: 4px;
+    background: #d9b76e;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.container {
+    width: 88%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section {
+    padding: 65px 0;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #101e35;
+}
+
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.intro p {
+    color: #647084;
+    font-size: 16px;
+}
+
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.story-box {
+    background: #101e35;
+    padding: 40px;
+    border-radius: 15px;
+    color: white;
+}
+
+.story-box h3 {
+    color: #d9b76e;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.story-box p {
+    color: #e1e6ed;
+}
+
+.story-content p {
+    color: #647084;
+    margin-bottom: 15px;
+}
+
+.features {
+    background: #101e35;
+    color: white;
+}
+
+.features h2 {
+    color: #e2c27e;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.feature {
+    background: #192d4a;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #30435d;
+}
+
+.feature .icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.feature h3 {
+    color: #e2c27e;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #d0d7e2;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.stat {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.stat h3 {
+    font-size: 32px;
+    color: #b28b42;
+}
+
+.stat p {
+    color: #647084;
+}
+
+.cta {
+    background: #e9edf2;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.cta h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    color: #647084;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #c39b51;
+    color: #101e35;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e2c27e;
+    transform: translateY(-2px);
+}
+
+footer {
+    background: #101e35;
+    text-align: center;
+    padding: 25px;
+    color: #d0d7e2;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #d9b76e;
+}
+
+@media(max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 45px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">KAIKI GUEST</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Welcome to Kaiki Guest</h1>
+        <div class="gold-line"></div>
+        <p>
+            Where comfort meets hospitality.
+            Experience a welcoming environment designed
+            to make every stay memorable.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container intro">
+        <h2>Who We Are</h2>
+        <div class="gold-line"></div>
+        <p>
+            Kaiki Guest is committed to providing guests
+            with a welcoming accommodation experience.
+            We believe that every guest deserves comfort,
+            respect and quality hospitality.
+            Whether you are staying for one night or longer,
+            our goal is to make you feel at home.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container story">
+
+        <div class="story-box">
+            <h3>Our Story</h3>
+            <p>
+                At Kaiki Guest, hospitality is more than
+                providing a place to sleep. It is about
+                creating an environment where people feel
+                welcomed, valued and comfortable.
+            </p>
+            <br>
+            <p>
+                Every detail of our guest experience
+                reflects our commitment to making
+                accommodation simple, convenient and
+                enjoyable.
+            </p>
+        </div>
+
+        <div class="story-content">
+            <h2>Our Mission</h2>
+            <div class="gold-line" style="margin-left:0"></div>
+            <p>
+                To provide welcoming, comfortable and
+                affordable accommodation while maintaining
+                high standards of hospitality and customer
+                service.
+            </p>
+
+            <h2>Our Vision</h2>
+            <div class="gold-line" style="margin-left:0"></div>
+            <p>
+                To become a trusted accommodation destination
+                recognised for excellent guest experiences,
+                reliability and outstanding hospitality.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section features">
+    <div class="container">
+        <h2>Why Choose Kaiki Guest?</h2>
+        <div class="gold-line"></div>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                <div class="icon">🛏️</div>
+                <h3>Comfortable Rooms</h3>
+                <p>
+                    Accommodation options designed to
+                    provide a comfortable and relaxing stay.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🤝</div>
+                <h3>Guest Care</h3>
+                <p>
+                    We value every guest and strive to
+                    provide welcoming and respectful service.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">⭐</div>
+                <h3>Quality Hospitality</h3>
+                <p>
+                    We are committed to making every
+                    guest's experience a positive one.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container intro">
+        <h2>Kaiki Guest at a Glance</h2>
+        <div class="gold-line"></div>
+
+        <div class="stats">
+            <div class="stat">
+                <h3>63</h3>
+                <p>Accommodation Rooms</p>
+            </div>
+
+            <div class="stat">
+                <h3>59</h3>
+                <p>Single Rooms</p>
+            </div>
+
+            <div class="stat">
+                <h3>4</h3>
+                <p>Double Rooms</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Your Comfort Matters to Us</h2>
+    <p>
+        Make Kaiki Guest your next accommodation destination.
+        We look forward to welcoming you.
+    </p>
+    <a href="index.html" class="btn">Explore Kaiki Guest</a>
+</section>
+
+<footer>
+    <p>
+        © 2026 <strong>Kaiki Guest</strong>.
+        All Rights Reserved.
+    </p>
+    <p>Hospitality • Comfort • Excellence</p>
+</footer>
+
+</body>
+</html>
